@@ -49,7 +49,7 @@ There are many other useful shortcuts for classic data science tasks:
 |:---------------------------------------|:--------------------------------------------------------------|
 | `ais init --name NAME --author AUTHOR` | Generate a template for an machine project                    |
 | `ais install`                          | Install OS and python dependencies for your project           |
-| `ais pipeline [--step]`                | Execute your project steps under `/project/pipeline`          |
+| `ais pipeline --step`                  | Execute your project steps under `/project/pipeline`          |
 | `ais tests`                            | Manage your tests under `/tests`                              |
 | `ais lab`                              | Start jupyter lab                                             |
 | `ais flask`                            | Start a flask server to serve your AI web app                 |
