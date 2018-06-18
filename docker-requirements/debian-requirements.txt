@@ -1,0 +1,14 @@
+build-essential
+wget
+curl
+git
+tree
+vim
+htop
+cron
+sudo
+locales
+mlocate
+unzip
+texlive-xetex
+nodejs
