@@ -30,11 +30,16 @@ Installation requirements:
 
 - [Docker CE](https://docs.docker.com/install/)
 
-To install:
+Get the image:
 
 ```bash
 docker pull fmikaelian/ai-station
-docker run -it -p 8888:8888 -p 6006:6006 -p 5000:5000 ai-station
+```
+
+Start the container:
+
+```bash
+docker run -it -v $(pwd):/home -p 8888:8888 -p 6006:6006 -p 5000:5000 fmikaelian/ai-station
 ```
 
 You can generate a machine learning project structure with the `ais` command:
