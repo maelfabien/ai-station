@@ -191,16 +191,16 @@ def pipeline(args):
 
     if args.download:
         print('downloading data')
-        subprocess.call('python3 {}/download.py'.format(project_name_pipeline), shell=True)
+        subprocess.call('time python3 {}/download.py'.format(project_name_pipeline), shell=True)
     if args.processing:
         print('processing data')
-        subprocess.call('python3 {}/processing.py'.format(project_name_pipeline), shell=True)
+        subprocess.call('time python3 {}/processing.py'.format(project_name_pipeline), shell=True)
     if args.train:
         print('training model')
-        subprocess.call('python3 {}/train.py'.format(project_name_pipeline), shell=True)
+        subprocess.call('time python3 {}/train.py'.format(project_name_pipeline), shell=True)
     if args.input:
         print('running inference')
-        subprocess.call('python3 {}/predict.py --input {}'.format(project_name_pipeline, args.input[0]), shell=True)
+        subprocess.call('time python3 {}/predict.py --input {}'.format(project_name_pipeline, args.input[0]), shell=True)
 
 
 def tests(args):

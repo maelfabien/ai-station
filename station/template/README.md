@@ -13,10 +13,11 @@
 - [Contributing](#contributing)
 - [References](#references)
 - [License](#license)
+- [Donations](#donations)
 
 ## Installation
 
-*__Pre-requisites:__ This repository uses the `ais` CLI. You will need to install it to use the project. See this [link](https://github.com/fmikaelian/ai-station) for installation instructions.*
+*__Pre-requisites:__ This repository uses the `ai-station` environment. You will need to install it to manipulate the project. See this [link](https://github.com/fmikaelian/ai-station) for installation instructions.*
 
 Clone the project repository and install its dependencies:
 
@@ -36,29 +37,30 @@ ais install
 
 ## Project Summary
 
-|                                  | Description |
-|----------------------------------|-------------|
-| Business objective               |             |
-| Operational usage of predictions |             |
-| Machine-learning task            |             |
-| Target                           |             |
-| Offline evaluation metric        |             |
-| Model used                       |             |
-| Input data sources               |             |
-| Input history depth              |             |
-| Input data size                  |             |
-| Data collection process          |             |
-| Feature selection                |             |
-| Applied filters                  |             |
-| Number of features               |             |
-| Most important features          |             |
-| Prediction granularity           |             |
-| Training frequency               |             |
-| Training duration                |             |
-| Predict frequency                |             |
-| Predict duration                 |             |
-| Predict file shape               |             |
-| Live evaluation process          |             |
+|                                              | Description |
+|----------------------------------------------|-------------|
+| Business objective                           |             |
+| Operational usage of predictions             |             |
+| Machine-learning task                        |             |
+| Granularity                                  |             |
+| Target                                       |             |
+| Offline evaluation metric                    |             |
+| Model used                                   |             |
+| Input data sources                           |             |
+| Data collection process                      |             |
+| Input data shape                             |             |
+| Input history depth                          |             |
+| Input data size before processing            |             |
+| Input data size after processing             |             |
+| Feature engineering process                  |             |
+| Feature selection process                    |             |
+| Applied filters                              |             |
+| Most important features                      |             |
+| Training frequency                           |             |
+| Training duration (including pre-processing) |             |
+| Predict frequency                            |             |
+| Predict duration (including pre-processing)  |             |
+| Live evaluation process                      |             |
 
 ## Getting started
 
@@ -95,6 +97,14 @@ Contributions and feedback are welcomed!
 ## License
 
 Copyright (c) 2018 {{ project_author }}. Licensed under the [MIT License](LICENSE)
+
+## Donations
+
+Support my indie work by sending me magic money:
+
+|                                   currency                                    | address                                    |
+|:-----------------------------------------------------------------------------:|--------------------------------------------|
+| <a ><img src="https://cdn.coinranking.com/rk4RKHOuW/eth.svg" width="30" ></a> | 0x2B2c793230D5433D00c2d1D1e7c4b1C647e74908 |
 
 <p align="center">
 </br>
