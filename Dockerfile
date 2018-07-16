@@ -5,11 +5,11 @@ WORKDIR /home/ai-station
 
 RUN apt-get update \
   && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-  && cat docker-requirements/debian-requirements.txt | xargs apt-get install -y \
+  && cat docker-requirements/requirements-os.txt | xargs apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip \
-  && pip install -r docker-requirements/python-requirements.txt \
+  && pip install -r docker-requirements/requirements-python.txt \
   && pip install .
 
 RUN jupyter serverextension enable --sys-prefix jupyterlab_latex \

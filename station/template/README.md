@@ -31,9 +31,9 @@ ais install
 
 | Feature | Status                                     |
 |---------|--------------------------------------------|
-| Name    | :white_check_mark: Implemented             |
+| Name    | :white_check_mark: Done                    |
 | Name    | :arrows_counterclockwise: Work In Progress |
-| Name    | :x: Not Implemented Yet                    |
+| Name    | :x: To Do                                  |
 
 ## Project Summary
 
@@ -48,10 +48,11 @@ ais install
 | Model used                                   |             |
 | Input data sources                           |             |
 | Data collection process                      |             |
-| Input data shape                             |             |
+| Input data format                            |             |
+| Input data size                              |             |
 | Input history depth                          |             |
-| Input data size before processing            |             |
-| Input data size after processing             |             |
+| Input data shape before processing           |             |
+| Input data shape after processing            |             |
 | Feature engineering process                  |             |
 | Feature selection process                    |             |
 | Applied filters                              |             |
