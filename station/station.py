@@ -224,7 +224,7 @@ def flask(args):
     """
 
     project_app = os.path.join(os.getcwd(), os.getcwd().rsplit('/', 1)[-1], 'app.py')
-    subprocess.call('LC_ALL=C.UTF-8 LANG=C.UTF-8 FLASK_APP={} flask run -h 0.0.0.0 --without-threads'.format(project_app), shell=True)
+    subprocess.call('FLASK_APP={} flask run -h 0.0.0.0 --without-threads'.format(project_app), shell=True)
 
 
 def tb(args):

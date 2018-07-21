@@ -17,6 +17,8 @@ RUN jupyter serverextension enable --sys-prefix jupyterlab_latex \
 
 RUN rm -rf /home/ai-station
 
+ENV LC_ALL=C.UTF-8 LANG=C.UTF-8 
+
 WORKDIR /home
 
 CMD ["/bin/bash"]
