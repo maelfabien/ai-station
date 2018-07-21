@@ -61,7 +61,8 @@ ais install
 | Training duration (including pre-processing) |             |
 | Predict frequency                            |             |
 | Predict duration (including pre-processing)  |             |
-| Live evaluation process                      |             |
+| Offline evaluation                           |             |
+| Online evaluation                            |             |
 
 ## Getting started
 
