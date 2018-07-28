@@ -36,10 +36,10 @@ Get the image:
 docker pull fmikaelian/ai-station
 ```
 
-Start the container:
+Start the container in the directory that will contain your project folders:
 
 ```bash
-docker run -it -v $(pwd):/home -p 8888:8888 -p 6006:6006 -p 5000:5000 fmikaelian/ai-station
+docker run -it -v $(pwd):/home -p 8888:8888 -p 6006:6006 -p 5000:5000 --name ai-station fmikaelian/ai-station
 ```
 
 You can generate a machine learning project structure with the `ais` command:
@@ -61,6 +61,12 @@ There are many other useful shortcuts for classic data science tasks:
 | `ais tb`                               | Start a tensorboard server with your project under in `/logs` |
 
 To generate a list of all available commands, type `ais --help`. To see individual commands options, type `ais [COMMAND] --help`.
+
+If you exit the container and want to restart it later:
+
+```bash
+docker start ai-station && docker exec -it ai-station bash
+```
 
 ### 🐜 Contributions
 
