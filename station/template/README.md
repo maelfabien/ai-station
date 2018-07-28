@@ -1,6 +1,7 @@
 # {{ project_name }}
 
 <p align="left">
+<img src="https://travis-ci.org/{{ project_author }}/{{ project_name }}.svg?branch=develop" height="18">
 <img src="https://travis-ci.org/{{ project_author }}/{{ project_name }}.svg?branch=master" height="18">
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" height="18">
 </p>
