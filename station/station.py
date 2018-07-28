@@ -207,10 +207,10 @@ def tests(args):
     """Manage your tests under /tests
     """
 
-    subprocess.call('python3 -m pytest tests/', shell=True)
-    subprocess.call('python3 -m pytest --flake8 tests/', shell=True)
-    subprocess.call('python3 -m pytest --cov={} tests/'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
-
+    subprocess.call('pytest', shell=True)
+    subprocess.call('pytest --flake8', shell=True)
+    subprocess.call('pytest --cov={} tests/'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
+    print('all tests passed ✅')
 
 def lab(args):
     """Start jupyter lab
