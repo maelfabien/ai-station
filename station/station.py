@@ -212,6 +212,7 @@ def tests(args):
     subprocess.call('pytest --cov={} tests/'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
     print('all tests passed ✅')
 
+
 def lab(args):
     """Start jupyter lab
     """

@@ -8,8 +8,8 @@ services:
 before_install:
   - docker build -t $DOCKER_USERNAME/ai-station .
   - docker images
-  - docker run -it -p 8888:8888 -p 6006:6006 -p 5000:5000 $DOCKER_USERNAME/ai-station /bin/bash -c 'ais --version'
-  - docker run -it -p 8888:8888 -p 6006:6006 -p 5000:5000 $DOCKER_USERNAME/ai-station /bin/bash -c 'ais init --name dummy_repo --author dummy_author && tree dummy_repo'
+  - docker run -it $DOCKER_USERNAME/ai-station /bin/bash -c 'ais --version'
+  - docker run -it $DOCKER_USERNAME/ai-station /bin/bash -c 'ais init --name dummy_repo --author dummy_author && tree dummy_repo'
 
 deploy:
   provider: script
