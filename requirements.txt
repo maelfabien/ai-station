@@ -9,6 +9,8 @@ pytest-cov
 pytest
 flake8
 flask_sslify
+flask_seasurf
+flask_limiter
 flask_cors
 flask
 pycodestyle==2.3.0
