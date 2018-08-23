@@ -2,3 +2,5 @@
 set -x
 
 echo installing OS project dependencies
+
+apt-get update

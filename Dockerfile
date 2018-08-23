@@ -15,10 +15,10 @@ RUN pip install --upgrade pip \
 RUN jupyter serverextension enable --sys-prefix jupyterlab_latex \
   && jupyter labextension install @jupyterlab/latex
 
-RUN rm -rf /home/ai-station
-
-ENV LC_ALL=C.UTF-8 LANG=C.UTF-8 
+ENV LC_ALL=C.UTF-8 LANG=C.UTF-8
 
 WORKDIR /home
+
+RUN rm -rf /home/ai-station
 
 CMD ["/bin/bash"]
