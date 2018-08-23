@@ -4,10 +4,13 @@ sphinx_rtd_theme
 pipreqs
 autopep8
 thefuck
+fabric
+pytest-selenium
 pytest-flake8
 pytest-cov
 pytest
 flake8
+selenium
 flask_sslify
 flask_seasurf
 flask_limiter

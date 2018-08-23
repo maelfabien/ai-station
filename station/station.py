@@ -180,7 +180,7 @@ def install(args):
     """
 
     subprocess.call('sh requirements/requirements-os.sh', shell=True)
-    subprocess.call('pip3 install -r requirements/requirements-python.txt', shell=True)
+    subprocess.call('pip3 install -e .', shell=True)
 
 
 def pipeline(args):
