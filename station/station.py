@@ -207,8 +207,7 @@ def tests(args):
     """Manage your tests under /tests
     """
 
-    subprocess.check_call('pytest --flake8', shell=True)
-    subprocess.check_call('pytest --cov={} tests/'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
+    subprocess.check_call('pytest --flake8 --cov={}'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
     subprocess.check_call('codecov', shell=True)
 
 
