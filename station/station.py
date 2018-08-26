@@ -209,6 +209,7 @@ def tests(args):
 
     subprocess.check_call('pytest --flake8', shell=True)
     subprocess.check_call('pytest --cov={} tests/'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
+    subprocess.check_call('codecov', shell=True)
 
 
 def lab(args):

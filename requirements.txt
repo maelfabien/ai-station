@@ -9,6 +9,7 @@ pytest-selenium
 pytest-flake8
 pytest-cov
 pytest
+codecov
 flake8
 selenium
 flask_sslify
