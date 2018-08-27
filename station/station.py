@@ -111,6 +111,13 @@ def main():
         help='Manage your tests under /tests'
     )
     tests_parser.set_defaults(func=tests)
+    tests_parser.add_argument(
+        '--token',
+        dest='token',
+        type=str,
+        nargs=1,
+        help='codecov upload token',
+        required=False)
 
     # jupyterlab
     lab_parser = commands.add_parser(
@@ -125,6 +132,18 @@ def main():
         help='Start a flask server to serve your AI web app'
     )
     flask_parser.set_defaults(func=flask)
+    flask_parser.add_argument(
+        '--dev',
+        action='store_const',
+        const='True',
+        help='serve app with flask development server',
+        required=False)
+    flask_parser.add_argument(
+        '--prod',
+        action='store_const',
+        const='True',
+        help='serve app with gunicorn production server',
+        required=False)
 
     # tensorboard
     tensorboard_parser = commands.add_parser(
@@ -208,7 +227,7 @@ def tests(args):
     """
 
     subprocess.check_call('pytest --flake8 --cov={}'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
-    subprocess.check_call('codecov', shell=True)
+    subprocess.check_call('codecov -t {}'.format(args.token[0]), shell=True)
 
 
 def lab(args):
@@ -222,8 +241,11 @@ def flask(args):
     """Start a flask server to serve your AI web app
     """
 
-    project_app = os.path.join(os.getcwd(), os.getcwd().rsplit('/', 1)[-1], 'app.py')
-    subprocess.call('FLASK_APP={} flask run -h 0.0.0.0 --without-threads'.format(project_app), shell=True)
+    if args.dev:
+        project_app = os.path.join(os.getcwd(), os.getcwd().rsplit('/', 1)[-1], 'app.py')
+        subprocess.call('FLASK_APP={} flask run -h 0.0.0.0 --without-threads'.format(project_app), shell=True)
+    if args.prod:
+        subprocess.call('gunicorn --bind 0.0.0.0:80 --daemon --workers 1 --timeout 60 --access-logfile logs/access.txt --error-logfile logs/error.txt app:app', shell=True)
 
 
 def tb(args):
