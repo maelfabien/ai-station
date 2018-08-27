@@ -111,13 +111,6 @@ def main():
         help='Manage your tests under /tests'
     )
     tests_parser.set_defaults(func=tests)
-    tests_parser.add_argument(
-        '--token',
-        dest='token',
-        type=str,
-        nargs=1,
-        help='codecov upload token',
-        required=False)
 
     # jupyterlab
     lab_parser = commands.add_parser(
@@ -227,7 +220,7 @@ def tests(args):
     """
 
     subprocess.check_call('pytest --flake8 --cov={}'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
-    subprocess.check_call('codecov -t {}'.format(args.token[0]), shell=True)
+    subprocess.call('codecov -t {}'.format(os.environ['CODECOV_TOKEN']), shell=True)
 
 
 def lab(args):
