@@ -6,6 +6,9 @@ WORKDIR /home/ai-station
 RUN apt-get update \
   && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
   && cat docker-requirements/requirements-os.txt | xargs apt-get install -y \
+  && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh \
+  && curl -L git.io/antigen > ~/antigen.zsh \
+  && cat docker-requirements/requirements-shell.txt > ~/.zshrc \
   && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip \
@@ -21,4 +24,4 @@ WORKDIR /home
 
 RUN rm -rf /home/ai-station
 
-CMD ["/bin/bash"]
+CMD ["zsh"]
