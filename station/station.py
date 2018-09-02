@@ -48,7 +48,7 @@ def main():
     # init
     init_parser = commands.add_parser(
         'init',
-        help='Generate a template for an AI project'
+        help='Generate a base template for your machine project.'
     )
     init_parser.set_defaults(func=init)
     init_parser.add_argument(
@@ -56,92 +56,92 @@ def main():
         dest='name',
         type=str,
         nargs=1,
-        help='name of package',
+        help='Name of package',
         required=True)
     init_parser.add_argument(
         '--author',
         dest='author',
         type=str,
         nargs=1,
-        help='name of author',
+        help='Name of author',
         required=True)
 
     # install
     install_parser = commands.add_parser(
         'install',
-        help='Install os and python dependencies for your project'
+        help='Install OS dependencies + your project as a python package.'
     )
     install_parser.set_defaults(func=install)
 
     # pipeline
     pipeline_parser = commands.add_parser(
         'pipeline',
-        help='Execute your project steps under /project/pipeline'
+        help='Execute one of your machine learning steps located in /project/pipeline.'
     )
     pipeline_parser.set_defaults(func=pipeline)
     pipeline_parser.add_argument(
         '--download',
         action='store_const',
         const='True',
-        help='downloading data',
+        help='Downloading data',
         required=False)
     pipeline_parser.add_argument(
         '--processing',
         action='store_const',
         const='True',
-        help='processing data',
+        help='Processing data',
         required=False)
     pipeline_parser.add_argument(
         '--train',
         action='store_const',
         const='True',
-        help='training model',
+        help='Training model',
         required=False)
     pipeline_parser.add_argument(
         '--predict',
         dest='input',
         type=str,
         nargs=1,
-        help='input path',
+        help='Input path',
         required=False)
 
     # tests
     tests_parser = commands.add_parser(
         'tests',
-        help='Manage your tests under /tests'
+        help='Performs unit-tests, pep8 checks and coverage reports for your tests located in /tests.'
     )
     tests_parser.set_defaults(func=tests)
-
-    # jupyterlab
-    lab_parser = commands.add_parser(
-        'lab',
-        help='Start jupyter lab'
-    )
-    lab_parser.set_defaults(func=lab)
 
     # flask
     flask_parser = commands.add_parser(
         'flask',
-        help='Start a flask server to serve your AI web app'
+        help='Start a flask server to serve your demo web app with defined server config.'
     )
     flask_parser.set_defaults(func=flask)
     flask_parser.add_argument(
         '--dev',
         action='store_const',
         const='True',
-        help='serve app with flask development server',
+        help='Serve app with flask development server',
         required=False)
     flask_parser.add_argument(
         '--prod',
         action='store_const',
         const='True',
-        help='serve app with gunicorn production server',
+        help='Serve app with gunicorn production server',
         required=False)
+
+    # jupyterlab
+    lab_parser = commands.add_parser(
+        'lab',
+        help='Start jupyter lab.'
+    )
+    lab_parser.set_defaults(func=lab)
 
     # tensorboard
     tensorboard_parser = commands.add_parser(
         'tb',
-        help='Start a tensorboard server with your project under in /logs'
+        help='Start a tensorboard server to display your logs located in /logs.'
     )
     tensorboard_parser.set_defaults(func=tb)
 
@@ -154,7 +154,7 @@ def main():
 
 
 def init(args):
-    """Generate a template for an AI project
+    """Generate a base template for your machine project.
     """
 
     cwd = os.getcwd()
@@ -188,7 +188,7 @@ def init(args):
 
 
 def install(args):
-    """Install os and python dependencies for your project
+    """Install OS dependencies + your project as a python package.
     """
 
     subprocess.call('sh requirements/requirements-os.sh', shell=True)
@@ -196,7 +196,7 @@ def install(args):
 
 
 def pipeline(args):
-    """Execute your project steps under /project/pipeline
+    """Execute one of your machine learning steps located in /project/pipeline (eg. --train or --predict).
     """
 
     project_name_pipeline = os.path.join(os.getcwd(), 'sasekoi', 'pipeline')
@@ -216,7 +216,7 @@ def pipeline(args):
 
 
 def tests(args):
-    """Manage your tests under /tests
+    """Performs unit-tests, pep8 checks and coverage reports for your tests located in /tests.
     """
 
     subprocess.check_call('pytest --flake8 --cov={}'.format(os.getcwd().rsplit('/', 1)[-1]), shell=True)
@@ -231,18 +231,17 @@ def lab(args):
 
 
 def flask(args):
-    """Start a flask server to serve your AI web app
+    """Start a flask server to serve your demo web app with defined server config (eg. --dev or --prod).
     """
 
     if args.dev:
-        project_app = os.path.join(os.getcwd(), os.getcwd().rsplit('/', 1)[-1], 'app.py')
-        subprocess.call('FLASK_APP={} flask run -h 0.0.0.0 --without-threads'.format(project_app), shell=True)
+        subprocess.call('FLASK_APP=app.py flask run -h 0.0.0.0 --without-threads', shell=True)
     if args.prod:
         subprocess.call('gunicorn --bind 0.0.0.0:80 --daemon --workers 1 --timeout 60 --access-logfile logs/access.txt --error-logfile logs/error.txt app:app', shell=True)
 
 
 def tb(args):
-    """Start a tensorboard server with your project under in /logs
+    """Start a tensorboard server to display your logs located in /logs.
     """
 
     if 'tensorboard' not in sys.modules:
