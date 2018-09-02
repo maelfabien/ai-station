@@ -12,6 +12,7 @@ pytest
 codecov
 flake8
 selenium
+gunicorn
 flask_sslify
 flask_seasurf
 flask_limiter
