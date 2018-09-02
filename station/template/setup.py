@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def read(file):
@@ -13,6 +13,6 @@ setup(
     url='https://github.com/{{ project_author }}/{{ project_name }}',
     author='{{ project_author }}',
     license='MIT',
-    packages=['{{ project_name }}'],
+    packages=find_packages(),
     install_requires=read('requirements/requirements-python.txt').split()
 )
