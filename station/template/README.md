@@ -1,8 +1,8 @@
 # {{ project_name }}
 
 <p align="left">
-<img src="https://travis-ci.org/{{ project_author }}/{{ project_name }}.svg?branch=develop" height="18">
 <img src="https://travis-ci.org/{{ project_author }}/{{ project_name }}.svg?branch=master" height="18">
+<img src="https://codecov.io/gh/{{ project_author }}/{{ project_name }}/branch/master/graph/badge.svg" height="18">
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" height="18">
 </p>
 
@@ -35,11 +35,15 @@ ais install
 
 ## Feature status
 
+📦 Current version is `0.0.1`.
+
 | Feature | Status                                     |
 |---------|--------------------------------------------|
 | Name    | :white_check_mark: Done                    |
 | Name    | :arrows_counterclockwise: Work In Progress |
 | Name    | :x: To Do                                  |
+
+More info in the [CHANGELOG.md](CHANGELOG.md) file.
 
 ## Project Summary
 
@@ -88,7 +92,7 @@ To read more about the different `ais` commands to manipulate this project, see 
 
 ## Contributing
 
-Contributions and feedback are welcomed!
+Contributions are welcomed! Be sure to review the contributing guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## References
 
