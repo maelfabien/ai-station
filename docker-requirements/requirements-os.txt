@@ -10,6 +10,7 @@ cron
 sudo
 locales
 mlocate
+time
 unzip
 texlive-xetex
 nodejs
