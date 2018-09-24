@@ -19,7 +19,7 @@ Data scientists waste too much time setting up their development environment and
 The `ai-station` docker image contains:
 
 - A minimal ubuntu OS with some productivity packages (git, make, tree, htop, etc...).
-- Cuda dependencies for GPU computing.
+- Cuda and tensorflow dependencies for GPU computing.
 - An enhanced shell based on zsh + oh-my-zsh, with a powerline theme and useful plugins.
 - A python 3 environment with some productivity packages (pipreqs, pytest, autopep8, etc...).
 - The great Jupyter Lab IDE, for data exploration and model prototyping.
