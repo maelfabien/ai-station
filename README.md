@@ -18,9 +18,10 @@ Data scientists waste too much time setting up their development environment and
 
 The `ai-station` docker image contains:
 
-- A minimal debian OS with some productivity packages (git, make, tree, htop, etc...).
-- An enhanced shell based on zsh + oh-my-zsh with a powerline theme and useful plugins.
-- A ready-to-use python 3.6 environment with some productivity packages (pipreqs, autopep8, pytest, etc...).
+- A minimal ubuntu OS with some productivity packages (git, make, tree, htop, etc...).
+- Cuda and tensorflow dependencies for GPU computing.
+- An enhanced shell based on zsh + oh-my-zsh, with a powerline theme and useful plugins.
+- A python 3 environment with some productivity packages (pipreqs, pytest, autopep8, etc...).
 - The great Jupyter Lab IDE, for data exploration and model prototyping.
 - The ![latex](https://latex.codecogs.com/gif.latex?%24%7B%5Clatex%7D%7B%5CLaTeX%5Cxspace%7D%24) template used for NIPS research papers (directly editable in Jupyter Lab).
 - The `ais` command line interface, a swiss knife for building your next machine learning project.
@@ -30,6 +31,7 @@ The `ai-station` docker image contains:
 Installation requirements:
 
 - [Docker CE](https://docs.docker.com/install/)
+- [NVIDIA Container Runtime for Docker](https://github.com/NVIDIA/nvidia-docker)
 
 Get the docker image:
 
@@ -37,10 +39,18 @@ Get the docker image:
 docker pull fmikaelian/ai-station
 ```
 
-Start the container in the directory that will contain your project folders:
+Start the container in the directory that will contain your development projects:
 
 ```bash
-docker run -it -v $(pwd):/home -p 8888:8888 -p 6006:6006 -p 5000:5000 -p 80:80 --name ai-station fmikaelian/ai-station
+docker run -it \
+  --runtime=nvidia \
+  -v $(pwd):/home \
+  -p 8888:8888 \
+  -p 6006:6006 \
+  -p 5000:5000 \
+  -p 80:80 \
+  --name ai-station \
+  fmikaelian/ai-station
 ```
 
 You can now generate a base template for your machine project ([see this example](station/template)) with the `ais` CLI:
