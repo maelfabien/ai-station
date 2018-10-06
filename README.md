@@ -26,12 +26,11 @@ The `ai-station` docker image contains:
 - The ![latex](https://latex.codecogs.com/gif.latex?%24%7B%5Clatex%7D%7B%5CLaTeX%5Cxspace%7D%24) template used for NIPS research papers (directly editable in Jupyter Lab).
 - The `ais` command line interface, a swiss knife for building your next machine learning project.
 
-### 🏃‍ Getting started
+### 👩🏻‍💻‍ Installation
 
-Installation requirements:
+Requirements:
 
 - [Docker CE](https://docs.docker.com/install/)
-- [NVIDIA Container Runtime for Docker](https://github.com/NVIDIA/nvidia-docker)
 
 Get the docker image:
 
@@ -43,7 +42,6 @@ Start the container in the directory that will contain your development projects
 
 ```bash
 docker run -it \
-  --runtime=nvidia \
   -v $(pwd):/home \
   -p 8888:8888 \
   -p 6006:6006 \
@@ -52,6 +50,10 @@ docker run -it \
   --name ai-station \
   fmikaelian/ai-station
 ```
+
+If you are willing to use `ai-station` with **GPU ⚡️**, please read my [medium blog post](https://medium.com/@fmikaelian/how-to-setup-a-custom-docker-gpu-development-environment-in-8-minutes-c7f0b41c02a6) for installation instructions.
+
+### 🏃‍ Getting started
 
 You can now generate a base template for your machine project ([see this example](station/template)) with the `ais` CLI:
 
