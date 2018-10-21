@@ -24,7 +24,7 @@ The `ai-station` docker image contains:
 - A python 3 environment with some productivity packages (pipreqs, pytest, autopep8, etc...).
 - The great Jupyter Lab IDE, for data exploration and model prototyping.
 - The ![latex](https://latex.codecogs.com/gif.latex?%24%7B%5Clatex%7D%7B%5CLaTeX%5Cxspace%7D%24) template used for NIPS research papers (directly editable in Jupyter Lab).
-- The `ais` command line interface, a swiss knife for building your next machine learning project.
+- The `ais` command line interface, a swiss knife for building your next machine learning project (cookiecutter + shortcuts).
 
 ### 👩🏻‍💻‍ Installation
 
@@ -55,7 +55,7 @@ If you are willing to use `ai-station` with **GPU ⚡️**, please read my [medi
 
 ### 🏃‍ Getting started
 
-You can now generate a base template for your machine project ([see this example](station/template)) with the `ais` CLI:
+You can now generate a base template for your machine-learning project ([see this example](station/template)) with the `ais` CLI:
 
 ```bash
 ais init --name NAME --author AUTHOR
@@ -65,7 +65,7 @@ There are many other useful shortcuts for classic data science tasks:
 
 | ⌨️ Command                              | ⚡️ Action                                                                                                  |
 |:---------------------------------------|:----------------------------------------------------------------------------------------------------------|
-| `ais init --name NAME --author AUTHOR` | Generate a base template for your machine project.                                                        |
+| `ais init --name NAME --author AUTHOR` | Generate a base template for your machine-learning project.                                               |
 | `ais install`                          | Install OS dependencies + your project as a python package.                                               |
 | `ais pipeline --step`                  | Execute one of your machine learning steps located in `/project/pipeline` (eg. `--train` or `--predict`). |
 | `ais tests`                            | Performs unit-tests, pep8 checks and coverage reports for your tests located in `/tests`.                 |
