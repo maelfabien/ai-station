@@ -44,7 +44,9 @@ COPY . /home/ai-station
 WORKDIR /home/ai-station
 
 RUN apt-get update && \
-    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_11.x | bash - && \
+    apt-get install -y nodejs && \
+    npm i -g git-labelmaker && \
     cat docker-requirements/requirements-os.txt | xargs apt-get install -y && \
     curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh && \
     curl -L git.io/antigen > ~/antigen.zsh && \

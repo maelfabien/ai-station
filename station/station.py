@@ -154,7 +154,7 @@ def main():
 
 
 def init(args):
-    """Generate a base template for your machine project.
+    """Generate a base template for your machine-learning project.
     """
 
     cwd = os.getcwd()

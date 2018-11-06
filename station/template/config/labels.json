@@ -1,0 +1,106 @@
+[
+  {
+    "name": "priority: critical 1️⃣",
+    "color": "#A52A2A"
+  },
+  {
+    "name": "priority: high 2️⃣",
+    "color": "#A52A2A"
+  },
+  {
+    "name": "priority: low 4️⃣",
+    "color": "#A52A2A"
+  },
+  {
+    "name": "priority: medium 3️⃣",
+    "color": "#A52A2A"
+  },
+  {
+    "name": "status: approved 🎉",
+    "color": "#efdeac"
+  },
+  {
+    "name": "status: duplicate 👨👨",
+    "color": "#efdeac"
+  },
+  {
+    "name": "status: good first issue 🐣",
+    "color": "#efdeac"
+  },
+  {
+    "name": "status: help wanted 👋",
+    "color": "#efdeac"
+  },
+  {
+    "name": "status: incomplete 💁‍♂️",
+    "color": "#efdeac"
+  },
+  {
+    "name": "status: invalid ❌",
+    "color": "#efdeac"
+  },
+  {
+    "name": "status: wontfix 🗑",
+    "color": "#efdeac"
+  },
+  {
+    "name": "tag: backend 🏭",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: dataset 💾",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: documentation 📖",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: environment ☁️",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: frontend 🎨",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: machine-learning 🤖",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: research ✍🏻",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: security 🔒",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: social 📧",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: style ✏️",
+    "color": "#CACACA"
+  },
+  {
+    "name": "tag: visualisation 📊",
+    "color": "#CACACA"
+  },
+  {
+    "name": "type: bug ⚠️",
+    "color": "#20648c"
+  },
+  {
+    "name": "type: enhancement 💡",
+    "color": "#20648c"
+  },
+  {
+    "name": "type: optimization ⚡",
+    "color": "#20648c"
+  },
+  {
+    "name": "type: question 💬",
+    "color": "#20648c"
+  }
+]
