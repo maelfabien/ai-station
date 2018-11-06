@@ -24,6 +24,7 @@ The `ai-station` docker image contains:
 - A python 3 environment with some productivity packages (pipreqs, pytest, autopep8, etc...).
 - The great Jupyter Lab IDE, for data exploration and model prototyping.
 - The ![latex](https://latex.codecogs.com/gif.latex?%24%7B%5Clatex%7D%7B%5CLaTeX%5Cxspace%7D%24) template used for NIPS research papers (directly editable in Jupyter Lab).
+- A git label package for machine-learning, to be used with [git-labelmaker](https://github.com/himynameisdave/git-labelmaker).
 - The `ais` command line interface, a swiss knife for building your next machine learning project (cookiecutter + shortcuts).
 
 ### 👩🏻‍💻‍ Installation
